@@ -1,0 +1,66 @@
+ucimf-openvanilla (2.10.11-4) unstable; urgency=medium
+
+  * Team upload.
+  * debian/control:
+    + Bump debhelper compat to v11.
+    + Bump Standards-Version to 4.2.1.
+    + Update maintainer field and use Debian Input Method Team.
+      (Closes: #899716)
+    + Update homepage field.
+    + Update Vcs-* fields and use git repo under Salsa Input Method
+      Team.
+    + Update uploaders email address and use the @debian.org one.
+  * debian/changelog: Remove trailing spaces.
+  * debian/rules:
+    + Modernize and use full hardening.
+    + Use "dh_missing --fail-missing".
+  * debian/copyright:
+    + Use correct upstream project name.
+    + Update source field.
+  * debian/patches:
+    + Refresh patches.
+    + Add patch to fix FTBFS against clang. (Closes: #753337)
+
+ -- Boyuan Yang <byang@debian.org>  Tue, 27 Nov 2018 15:11:50 -0500
+
+ucimf-openvanilla (2.10.11-3) unstable; urgency=medium
+
+  * Bump Standards-Version to 3.9.8.
+  * Bump compat to 10.
+  * Fix GCC-6 compiling error.
+  * Add ChangZhuo Chen as Uploaders.
+  * Update Homepage to GitHub.
+  * Add Vcs-* fields.
+  * Use copyright format 1.0.
+
+ -- ChangZhuo Chen (陳昌倬) <czchen@debian.org>  Wed, 18 Jan 2017 19:56:54 +0800
+
+ucimf-openvanilla (2.10.11-2) unstable; urgency=low
+
+  * Use my @debian.org email address
+  * Std-ver: 3.9.0 -> 3.9.2, no change.
+  * Remove useless .la file.
+  * LDFLAGS += -Wl,--as-needed
+
+ -- Aron Xu <aron@debian.org>  Mon, 01 Aug 2011 08:44:53 +0000
+
+ucimf-openvanilla (2.10.11-1) unstable; urgency=low
+
+  * New upstream release:
+      Tuning Makefile and scripts,
+      Function improvements.
+  * debian/control:
+      Bump std-ver to 3.9.0,
+      Change dependency issues stuff to work with openvanilla-modules changes.
+  * debian/copyright:
+      Update copyright information.
+  * debian/watch:
+      Update to make it work with code.google.com changes.
+
+ -- Aron Xu <happyaron.xu@gmail.com>  Tue, 13 Jul 2010 15:09:32 +0800
+
+ucimf-openvanilla (2.10.6-1) unstable; urgency=low
+
+  * Initial release (Closes: #570202)
+
+ -- Aron Xu <happyaron.xu@gmail.com>  Wed, 17 Feb 2010 16:22:05 +0800

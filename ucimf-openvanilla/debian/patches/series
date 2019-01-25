@@ -1,0 +1,2 @@
+fix-GCC-6.patch
+0002-Fix-FTBFS-with-clang-instead-of-gcc-Closes-753337.patch

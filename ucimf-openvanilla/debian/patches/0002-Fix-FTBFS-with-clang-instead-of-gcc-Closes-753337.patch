@@ -1,0 +1,37 @@
+From: Alexander <sanek23994@gmail.com>
+Date: Mon, 30 Jun 2014 22:04:17 +0400
+Subject: Fix FTBFS with clang instead of gcc (Closes: #753337)
+
+Bug-Debian: https://bugs.debian.org/753337
+Last-Update: 2018-11-27
+---
+ src/openvanilla.cpp | 2 +-
+ src/openvanilla.h   | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/openvanilla.cpp b/src/openvanilla.cpp
+index 2bff9f6..752dfa9 100644
+--- a/src/openvanilla.cpp
++++ b/src/openvanilla.cpp
+@@ -29,7 +29,7 @@
+  * implementation of OVImfKeyCode
+  */
+ 
+-OVImfKeyCode::OVImfKeyCode (int p=0)  { chr=p; shift=capslock=ctrl=alt=0; }
++OVImfKeyCode::OVImfKeyCode (int p)  { chr=p; shift=capslock=ctrl=alt=0; }
+ int OVImfKeyCode::code()              { return chr; }
+ bool OVImfKeyCode::isShift()           { return shift!=0; }
+ bool OVImfKeyCode::isCapslock()        { return capslock!=0; }
+diff --git a/src/openvanilla.h b/src/openvanilla.h
+index 0563a73..3d7a980 100644
+--- a/src/openvanilla.h
++++ b/src/openvanilla.h
+@@ -38,7 +38,7 @@ struct OVLibrary {
+ 
+ class OVImfKeyCode : public OVKeyCode  {
+ public:
+-    OVImfKeyCode (int p);
++    OVImfKeyCode (int p = 0);
+     virtual int code();          
+     virtual bool isShift();       
+     virtual bool isCapslock();    
